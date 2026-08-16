@@ -65,12 +65,37 @@ body {
     width: auto;
     margin: 0;
     background-color: var(--color-white);
+    color: var(--color-stone-600);
+}
+
+h1 {
+    color: var(--color-stone-900);
 }
 
 ul, 
 ol {
     padding-left: 2.5rem;
 }
+
+ul { list-style: none; }          /* keep your padding-left: 2.5rem */
+
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "";
+  flex: none;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--color-brown-800);
+}
+
+.preparation li::before { background: var(--color-rose-800); }
 
 li {
     padding-left: 1.6rem;
@@ -81,10 +106,6 @@ h2,
 tr > td:nth-child(2) {
     color: var(--color-brown-800);
     font-weight: bold;
-}
-
-li::marker {
-    margin-right: 1.6rem;
 }
 
 li + li {
@@ -121,19 +142,22 @@ tr {
     border-width: 0 0 0.1rem 0;
 }
 
-tr > td:nth-child(1) {
+tr > th {
+    text-align: left;
     padding-left: 3.2rem;
 }
 
-tr > td:nth-child(2) {
+tr > td {
     padding-left: 1.6rem;
     padding-right: 3.2rem;
 }
 
+th,
 td {
     padding: 1.2rem 0rem;
 }
 
+tr:nth-child(1) > th,
 tr:nth-child(1) > td {
     padding-top: 0rem;
 }
@@ -143,7 +167,8 @@ tr:nth-last-child(1) {
 }
 
 
-tr:nth-last-child(1) > td {
+tr:nth-last-child(1) > th,
+tr:nth-last-child(1) > td  {
     padding-bottom: 0rem;
 }
 
@@ -159,7 +184,7 @@ tr:nth-last-child(1) > td {
 }
 
 .recipe-text {
-    padding: 0rem clamp(3rem, 1vh, 4rem) clamp(3rem, 1vh, 4rem) clamp(3rem, 1vh, 4rem);
+    padding: 0rem 3rem 4rem 3rem;
 }
 
 .recipe img {
