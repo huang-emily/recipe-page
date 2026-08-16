@@ -164,6 +164,9 @@ tr:nth-last-child(1) > td {
 
 .recipe img {
     margin-bottom: 4rem;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -211,7 +214,6 @@ tr:nth-last-child(1) > td {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         align-items: center;
         padding: 12.8rem 4rem;
     }
